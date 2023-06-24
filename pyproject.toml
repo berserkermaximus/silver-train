@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "Assignment for someone."
 authors = ["berserkermaximus <ansknim977@gmail.com>"]
 readme = "README.md"
-packages = [{include = "silver_train"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"

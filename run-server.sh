@@ -1,0 +1,1 @@
+uvicorn app.server:api --port 9061 --reload
