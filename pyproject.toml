@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "silver-train"
+version = "0.1.0"
+description = "Assignment for someone."
+authors = ["berserkermaximus <ansknim977@gmail.com>"]
+readme = "README.md"
+packages = [{include = "silver_train"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.98.0"
+psycopg2 = "^2.9.6"
+uvicorn = "^0.22.0"
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
