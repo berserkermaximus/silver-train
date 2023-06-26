@@ -9,6 +9,11 @@ class Precedence(str, enum.Enum):
     secondary = "secondary"
 
 
+class Input(BaseModel):
+    email: str
+    phoneNumber: int
+
+
 class Contact(BaseModel):
     id: int
     phoneNumber: str
@@ -22,9 +27,9 @@ class Contact(BaseModel):
 
 class Identity(BaseModel):
     primaryContatctId: int
-    emails: List[Optional[str]]
-    phoneNumbers: List[Optional[str]]
-    secondaryContactIds: List[int]
+    emails: List[str]
+    phoneNumbers: List[str]
+    secondaryContactIds: List[int] = None
 
 
 class Identify(BaseModel):
