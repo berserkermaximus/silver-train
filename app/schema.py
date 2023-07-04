@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List, Any
 from datetime import datetime
 import enum
 
@@ -10,8 +10,8 @@ class Precedence(str, enum.Enum):
 
 
 class Input(BaseModel):
-    email: str
-    phoneNumber: int
+    email: str = None
+    phoneNumber: int = None
 
 
 class Contact(BaseModel):
@@ -27,8 +27,8 @@ class Contact(BaseModel):
 
 class Identity(BaseModel):
     primaryContatctId: int
-    emails: List[str]
-    phoneNumbers: List[str]
+    emails: List[Any]
+    phoneNumbers: List[Any]
     secondaryContactIds: List[int] = None
 
 

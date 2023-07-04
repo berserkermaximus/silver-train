@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from .schema import Identify
-from .crud import identify, delete_all, delete
+from .crud import identify, delete_all
 api = FastAPI()
 
 
@@ -11,4 +11,3 @@ async def index():
 
 api.post("/identify", response_model=Identify)(identify)
 api.post("/delete-all")(delete_all)
-api.post("/delete")(delete)
